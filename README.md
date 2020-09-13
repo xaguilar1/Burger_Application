@@ -45,6 +45,8 @@ All the recommended files and directories from the steps above should look like 
 ```
 #### Screenshot 
 
+<img width="1041" alt="Screen Shot 2020-09-13 at 1 48 06 PM" src="https://user-images.githubusercontent.com/65522080/93025006-6b426880-f5c8-11ea-9bce-e4a2d9bf846f.png">
+
 
 #### Deployment
 
