@@ -1,8 +1,8 @@
-const connection = require("../config/connection.js");
+const connection = require("../config/connection");
 
 const orm = {
     selectAll: function(tableInput, cb) {
-        const queryS = "SELECT * FROM" + tableInput + ";";
+        const queryS = "SELECT * FROM ??";
         connection.query(queryS, [tableInput], function(err, result) {
             if (err) {
                 throw err;
@@ -21,7 +21,12 @@ const orm = {
     },
     upateOne: function(id, cb) {
         const queryS = "UPDATE burgers SET devoured = true WHERE id = ?"
-        connection.query(queryS, [id], callback)
+        connection.query(queryS, [id], cb), function(err, result) {
+            if(err) {
+                throw err;
+            }
+            cb(result);
+        }
     }
 }
 

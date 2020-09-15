@@ -1,0 +1,16 @@
+.jumbotron {
+    background-image: url("../images/burger-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(218, 207, 194);
+}
+
+
+@media (min-width: 200px) {
+    .jumbotron {
+        padding: 1rem 1rem;
+    }}
