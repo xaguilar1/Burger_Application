@@ -5,11 +5,6 @@
     text-align: center;
 }
 
-.container {
-    background-color: rgb(218, 207, 194);
-}
-
-
 @media (min-width: 200px) {
     .jumbotron {
         padding: 1rem 1rem;

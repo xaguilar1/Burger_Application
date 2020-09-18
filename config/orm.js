@@ -19,15 +19,15 @@ const orm = {
             cb(result);
         })
     },
-    upateOne: function(id, cb) {
-        const queryS = "UPDATE burgers SET devoured = true WHERE id = ?"
-        connection.query(queryS, [id], cb), function(err, result) {
+    updateOne: function(id, cb) {
+        const queryS = "UPDATE burgers SET devoured = 1 WHERE id = ?";
+        connection.query(queryS, [id], function(err, result) {
             if(err) {
                 throw err;
             }
             cb(result);
+        });
         }
-    }
 }
 
 module.exports = orm;

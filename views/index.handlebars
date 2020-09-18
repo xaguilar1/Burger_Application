@@ -21,7 +21,7 @@
       <h2 >Burgers to be Devoured!</h2>
       <ul class="list-group">
         {{#each burgers}}
-        {{#unless devoured}}
+        {{#unless this.devoured}}
         <li class="list-group-item">
           {{burger_name}}
           <button id={{id}} type="button" class="btn btn-outline-danger devourBtn">Devour it!</button>
@@ -49,8 +49,8 @@
       <h2> Devoured Burgers!</h2>
       <ul class="list-group">
         {{#each burgers}}
-        {{#if devoured}}
-        <li class="list-group">
+        {{#if this.devoured}}
+        <li class="list-group-item">
           {{burger_name}}
         </li>
         {{/if}}
@@ -63,9 +63,10 @@
 
 <script>
     $("button").click(function (event) {
-        const id =event.target.id;
+        const id = event.target.id;
+        console.log(id);
         $.ajax({
-            url: 'api/burgers/${id}',
+            url: `/api/burgers/${id}`,
             method: "PUT"
         }).then(location.reload())
     })
